@@ -1,6 +1,12 @@
-const { john, peter } = require("./names");
-const sayHi = require("./utils");
+const path = require("path");
 
-sayHi("susan");
-sayHi(john);
-sayHi(peter);
+console.log(path.sep);
+
+const filePath = path.join("/content", "subfolder", "test.txt");
+console.log(filePath);
+
+const base = path.basename(filePath);
+console.log(base);
+
+const absolute = path.resolve(__dirname, "content", "subfolder", "test.txt");
+console.log(absolute);
